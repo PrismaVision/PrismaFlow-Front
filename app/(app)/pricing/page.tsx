@@ -6,49 +6,49 @@ export default function PricingPage() {
   return (
     <div className="container py-6 space-y-8">
       <div className="flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Simple, transparent pricing</h1>
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Preços simples e transparentes</h1>
         <p className="text-muted-foreground md:text-xl">
-          Choose the plan that's right for you and your team. All plans include a 14-day free trial.
+          Escolha o plano ideal para você e sua equipe. Todos os planos incluem 14 dias de teste grátis.
         </p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle>Free</CardTitle>
-            <CardDescription>Perfect for individuals and small teams</CardDescription>
+            <CardTitle>Gratuito</CardTitle>
+            <CardDescription>Perfeito para indivíduos e pequenas equipes</CardDescription>
             <div className="mt-4 flex items-baseline text-3xl font-bold">
-              $0
-              <span className="ml-1 text-sm font-normal text-muted-foreground">/month</span>
+              R$0
+              <span className="ml-1 text-sm font-normal text-muted-foreground">/mês</span>
             </div>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Up to 3 projects</span>
+                <span>Até 3 projetos</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Basic Kanban boards</span>
+                <span>Quadros Kanban básicos</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Up to 5 team members</span>
+                <span>Até 5 membros na equipe</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>1GB storage</span>
+                <span>1GB de armazenamento</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Community support</span>
+                <span>Suporte da comunidade</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
             <Button className="w-full" variant="outline">
-              Get Started
+              Começar
             </Button>
           </CardFooter>
         </Card>
@@ -58,130 +58,126 @@ export default function PricingPage() {
           </div>
           <CardHeader>
             <CardTitle>Pro</CardTitle>
-            <CardDescription>Perfect for growing teams</CardDescription>
+            <CardDescription>Perfeito para equipes em crescimento</CardDescription>
             <div className="mt-4 flex items-baseline text-3xl font-bold">
-              $12
-              <span className="ml-1 text-sm font-normal text-muted-foreground">/user/month</span>
+              R$12
+              <span className="ml-1 text-sm font-normal text-muted-foreground">/usuário/mês</span>
             </div>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Unlimited projects</span>
+                <span>Projetos ilimitados</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Advanced Kanban boards</span>
+                <span>Quadros Kanban avançados</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Sprint planning</span>
+                <span>Planejamento de sprints</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Reporting and analytics</span>
+                <span>Relatórios e análises</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>10GB storage</span>
+                <span>10GB de armazenamento</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Priority email support</span>
+                <span>Suporte prioritário por e-mail</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
-            <Button className="w-full">Get Started</Button>
+            <Button className="w-full">Começar</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
             <CardTitle>Enterprise</CardTitle>
-            <CardDescription>For large organizations</CardDescription>
-            <div className="mt-4 flex items-baseline text-3xl font-bold">Custom</div>
+            <CardDescription>Para grandes organizações</CardDescription>
+            <div className="mt-4 flex items-baseline text-3xl font-bold">Personalizado</div>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Everything in Pro</span>
+                <span>Tudo do Pro</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>SSO and advanced security</span>
+                <span>SSO e segurança avançada</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Dedicated support</span>
+                <span>Suporte dedicado</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Custom integrations</span>
+                <span>Integrações personalizadas</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>Unlimited storage</span>
+                <span>Armazenamento ilimitado</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>99.9% uptime SLA</span>
+                <span>99,9% de SLA de uptime</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
             <Button className="w-full" variant="outline">
-              Contact Sales
+              Falar com Vendas
             </Button>
           </CardFooter>
         </Card>
       </div>
 
       <div className="mx-auto max-w-3xl space-y-4">
-        <h2 className="text-2xl font-bold text-center">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-center">Perguntas Frequentes</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Can I cancel at any time?</CardTitle>
+              <CardTitle className="text-lg">Posso cancelar a qualquer momento?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Yes, you can cancel your subscription at any time. You'll continue to have access to your plan until the
-                end of your billing period.
+                Sim, você pode cancelar sua assinatura a qualquer momento. Você continuará tendo acesso ao seu plano até o final do período de cobrança.
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">How does the free trial work?</CardTitle>
+              <CardTitle className="text-lg">Como funciona o teste grátis?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                All paid plans include a 14-day free trial. No credit card is required to start. You can upgrade to a
-                paid plan at any time during your trial.
+                Todos os planos pagos incluem 14 dias de teste grátis. Não é necessário cartão de crédito para começar. Você pode fazer upgrade para um plano pago a qualquer momento durante o teste.
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Can I change plans later?</CardTitle>
+              <CardTitle className="text-lg">Posso mudar de plano depois?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Yes, you can upgrade or downgrade your plan at any time. If you upgrade, the change will take effect
-                immediately. If you downgrade, the change will take effect at the end of your current billing period.
+                Sim, você pode fazer upgrade ou downgrade do seu plano a qualquer momento. Se fizer upgrade, a mudança é imediata. Se fizer downgrade, a mudança ocorre ao final do período de cobrança atual.
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Do you offer discounts?</CardTitle>
+              <CardTitle className="text-lg">Vocês oferecem descontos?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                We offer discounts for non-profit organizations and educational institutions. Please contact our sales
-                team for more information.
+                Oferecemos descontos para organizações sem fins lucrativos e instituições de ensino. Entre em contato com nosso time de vendas para mais informações.
               </p>
             </CardContent>
           </Card>
@@ -189,12 +185,12 @@ export default function PricingPage() {
       </div>
 
       <div className="mx-auto max-w-3xl rounded-lg border bg-background p-8 text-center">
-        <h2 className="text-2xl font-bold">Still have questions?</h2>
+        <h2 className="text-2xl font-bold">Ainda tem dúvidas?</h2>
         <p className="mt-2 text-muted-foreground">
-          Our team is here to help. Contact us for more information about our plans and pricing.
+          Nossa equipe está pronta para ajudar. Entre em contato para mais informações sobre nossos planos e preços.
         </p>
         <div className="mt-6">
-          <Button>Contact Sales</Button>
+          <Button>Falar com Vendas</Button>
         </div>
       </div>
     </div>

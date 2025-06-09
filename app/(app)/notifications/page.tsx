@@ -11,45 +11,45 @@ export default function NotificationsPage() {
     {
       id: "1",
       type: "mention",
-      message: "John mentioned you in a comment",
-      project: "Website Redesign",
-      task: "Homepage Design",
-      time: "2 hours ago",
+      message: "John mencionou você em um comentário",
+      project: "Redesign do Site",
+      task: "Design da Página Inicial",
+      time: "Há 2 horas",
       read: false,
     },
     {
       id: "2",
       type: "assignment",
-      message: "Sarah assigned you a task",
-      project: "Mobile App Development",
-      task: "User Authentication",
-      time: "Yesterday",
+      message: "Sarah atribuiu uma tarefa para você",
+      project: "Desenvolvimento de App Mobile",
+      task: "Autenticação de Usuário",
+      time: "Ontem",
       read: false,
     },
     {
       id: "3",
       type: "comment",
-      message: "New comment on your task",
-      project: "Website Redesign",
-      task: "API Integration",
-      time: "2 days ago",
+      message: "Novo comentário na sua tarefa",
+      project: "Redesign do Site",
+      task: "Integração de API",
+      time: "Há 2 dias",
       read: true,
     },
     {
       id: "4",
       type: "sprint",
-      message: "Sprint 3 is starting tomorrow",
-      project: "Website Redesign",
-      time: "2 days ago",
+      message: "Sprint 3 começa amanhã",
+      project: "Redesign do Site",
+      time: "Há 2 dias",
       read: true,
     },
     {
       id: "5",
       type: "mention",
-      message: "Bob mentioned you in a comment",
-      project: "Marketing Campaign",
-      task: "Content Calendar",
-      time: "3 days ago",
+      message: "Bob mencionou você em um comentário",
+      project: "Campanha de Marketing",
+      task: "Calendário de Conteúdo",
+      time: "Há 3 dias",
       read: true,
     },
   ])
@@ -75,32 +75,32 @@ export default function NotificationsPage() {
     <div className="container py-6 space-y-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Notifications</h1>
-          <p className="text-muted-foreground">Stay updated with the latest activity</p>
+          <h1 className="text-3xl font-bold">Notificações</h1>
+          <p className="text-muted-foreground">Fique atualizado com as últimas atividades</p>
         </div>
         <Button variant="outline" onClick={markAllAsRead} disabled={unreadCount === 0}>
-          Mark all as read
+          Marcar todas como lidas
         </Button>
       </div>
 
       <Tabs defaultValue="all" className="space-y-4">
         <TabsList>
           <TabsTrigger value="all">
-            All
+            Todas
             <span className="ml-2 rounded-full bg-muted px-2 py-0.5 text-xs font-medium">{notifications.length}</span>
           </TabsTrigger>
           <TabsTrigger value="unread">
-            Unread
+            Não lidas
             <span className="ml-2 rounded-full bg-muted px-2 py-0.5 text-xs font-medium">{unreadCount}</span>
           </TabsTrigger>
-          <TabsTrigger value="mentions">Mentions</TabsTrigger>
-          <TabsTrigger value="assignments">Assignments</TabsTrigger>
+          <TabsTrigger value="mentions">Menções</TabsTrigger>
+          <TabsTrigger value="assignments">Atribuições</TabsTrigger>
         </TabsList>
         <TabsContent value="all" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>All Notifications</CardTitle>
-              <CardDescription>View all your notifications in one place</CardDescription>
+              <CardTitle>Todas as Notificações</CardTitle>
+              <CardDescription>Veja todas as suas notificações em um só lugar</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -121,14 +121,14 @@ export default function NotificationsPage() {
                       <div className="flex-1 space-y-1">
                         <p className="font-medium">{notification.message}</p>
                         <p className="text-sm text-muted-foreground">
-                          Project: {notification.project}
-                          {notification.task && ` • Task: ${notification.task}`}
+                          Projeto: {notification.project}
+                          {notification.task && ` • Tarefa: ${notification.task}`}
                         </p>
                         <p className="text-xs text-muted-foreground">{notification.time}</p>
                       </div>
                       {!notification.read && (
                         <Button variant="ghost" size="sm" onClick={() => markAsRead(notification.id)}>
-                          Mark as read
+                          Marcar como lida
                         </Button>
                       )}
                     </div>
@@ -136,9 +136,9 @@ export default function NotificationsPage() {
                 ) : (
                   <div className="flex flex-col items-center justify-center py-8 text-center">
                     <Bell className="h-12 w-12 text-muted-foreground/50" />
-                    <h3 className="mt-4 text-lg font-medium">No notifications</h3>
+                    <h3 className="mt-4 text-lg font-medium">Sem notificações</h3>
                     <p className="text-muted-foreground">
-                      You're all caught up! Check back later for new notifications.
+                      Você está em dia! Volte mais tarde para novas notificações.
                     </p>
                   </div>
                 )}
@@ -149,8 +149,8 @@ export default function NotificationsPage() {
         <TabsContent value="unread" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Unread Notifications</CardTitle>
-              <CardDescription>View your unread notifications</CardDescription>
+              <CardTitle>Notificações Não Lidas</CardTitle>
+              <CardDescription>Veja suas notificações não lidas</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -168,21 +168,21 @@ export default function NotificationsPage() {
                         <div className="flex-1 space-y-1">
                           <p className="font-medium">{notification.message}</p>
                           <p className="text-sm text-muted-foreground">
-                            Project: {notification.project}
-                            {notification.task && ` • Task: ${notification.task}`}
+                            Projeto: {notification.project}
+                            {notification.task && ` • Tarefa: ${notification.task}`}
                           </p>
                           <p className="text-xs text-muted-foreground">{notification.time}</p>
                         </div>
                         <Button variant="ghost" size="sm" onClick={() => markAsRead(notification.id)}>
-                          Mark as read
+                          Marcar como lida
                         </Button>
                       </div>
                     ))
                 ) : (
                   <div className="flex flex-col items-center justify-center py-8 text-center">
                     <CheckCircle2 className="h-12 w-12 text-muted-foreground/50" />
-                    <h3 className="mt-4 text-lg font-medium">All caught up!</h3>
-                    <p className="text-muted-foreground">You have no unread notifications.</p>
+                    <h3 className="mt-4 text-lg font-medium">Tudo em dia!</h3>
+                    <p className="text-muted-foreground">Você não tem notificações não lidas.</p>
                   </div>
                 )}
               </div>
@@ -192,8 +192,8 @@ export default function NotificationsPage() {
         <TabsContent value="mentions" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Mentions</CardTitle>
-              <CardDescription>View notifications where you were mentioned</CardDescription>
+              <CardTitle>Menções</CardTitle>
+              <CardDescription>Veja notificações onde você foi mencionado</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -213,14 +213,14 @@ export default function NotificationsPage() {
                         <div className="flex-1 space-y-1">
                           <p className="font-medium">{notification.message}</p>
                           <p className="text-sm text-muted-foreground">
-                            Project: {notification.project}
-                            {notification.task && ` • Task: ${notification.task}`}
+                            Projeto: {notification.project}
+                            {notification.task && ` • Tarefa: ${notification.task}`}
                           </p>
                           <p className="text-xs text-muted-foreground">{notification.time}</p>
                         </div>
                         {!notification.read && (
                           <Button variant="ghost" size="sm" onClick={() => markAsRead(notification.id)}>
-                            Mark as read
+                            Marcar como lida
                           </Button>
                         )}
                       </div>
@@ -228,8 +228,8 @@ export default function NotificationsPage() {
                 ) : (
                   <div className="flex flex-col items-center justify-center py-8 text-center">
                     <User className="h-12 w-12 text-muted-foreground/50" />
-                    <h3 className="mt-4 text-lg font-medium">No mentions</h3>
-                    <p className="text-muted-foreground">You haven't been mentioned in any comments yet.</p>
+                    <h3 className="mt-4 text-lg font-medium">Nenhuma menção</h3>
+                    <p className="text-muted-foreground">Você ainda não foi mencionado em nenhum comentário.</p>
                   </div>
                 )}
               </div>
@@ -239,8 +239,8 @@ export default function NotificationsPage() {
         <TabsContent value="assignments" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Assignments</CardTitle>
-              <CardDescription>View tasks assigned to you</CardDescription>
+              <CardTitle>Atribuições</CardTitle>
+              <CardDescription>Veja tarefas atribuídas a você</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -260,14 +260,14 @@ export default function NotificationsPage() {
                         <div className="flex-1 space-y-1">
                           <p className="font-medium">{notification.message}</p>
                           <p className="text-sm text-muted-foreground">
-                            Project: {notification.project}
-                            {notification.task && ` • Task: ${notification.task}`}
+                            Projeto: {notification.project}
+                            {notification.task && ` • Tarefa: ${notification.task}`}
                           </p>
                           <p className="text-xs text-muted-foreground">{notification.time}</p>
                         </div>
                         {!notification.read && (
                           <Button variant="ghost" size="sm" onClick={() => markAsRead(notification.id)}>
-                            Mark as read
+                            Marcar como lida
                           </Button>
                         )}
                       </div>
@@ -275,8 +275,8 @@ export default function NotificationsPage() {
                 ) : (
                   <div className="flex flex-col items-center justify-center py-8 text-center">
                     <CheckCircle2 className="h-12 w-12 text-muted-foreground/50" />
-                    <h3 className="mt-4 text-lg font-medium">No assignments</h3>
-                    <p className="text-muted-foreground">You don't have any task assignments yet.</p>
+                    <h3 className="mt-4 text-lg font-medium">Nenhuma atribuição</h3>
+                    <p className="text-muted-foreground">Você ainda não tem tarefas atribuídas.</p>
                   </div>
                 )}
               </div>

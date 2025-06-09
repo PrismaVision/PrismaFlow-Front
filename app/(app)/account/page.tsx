@@ -13,69 +13,69 @@ import { Switch } from "@/components/ui/switch"
 export default function AccountPage() {
   const [isEditing, setIsEditing] = useState(false)
 
-  // Sample user data
+  // Dados de exemplo do usuário
   const user = {
-    name: "John Doe",
-    email: "john.doe@example.com",
+    name: "João da Silva",
+    email: "joao.silva@exemplo.com",
     avatar: "/placeholder.svg?height=128&width=128",
-    bio: "Product manager with 5+ years of experience in SaaS products.",
-    role: "Product Manager",
-    company: "Acme Inc.",
-    location: "San Francisco, CA",
+    bio: "Gerente de produto com mais de 5 anos de experiência em SaaS.",
+    role: "Gerente de Produto",
+    company: "Acme Ltda.",
+    location: "São Paulo, SP",
   }
 
   return (
     <div className="container py-6 space-y-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-3xl font-bold">My Account</h1>
+        <h1 className="text-3xl font-bold">Minha Conta</h1>
       </div>
 
       <Tabs defaultValue="profile" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="profile">Profile</TabsTrigger>
-          <TabsTrigger value="notifications">Notifications</TabsTrigger>
-          <TabsTrigger value="billing">Billing</TabsTrigger>
-          <TabsTrigger value="security">Security</TabsTrigger>
+          <TabsTrigger value="profile">Perfil</TabsTrigger>
+          <TabsTrigger value="notifications">Notificações</TabsTrigger>
+          <TabsTrigger value="billing">Cobrança</TabsTrigger>
+          <TabsTrigger value="security">Segurança</TabsTrigger>
         </TabsList>
         <TabsContent value="profile" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Profile</CardTitle>
-              <CardDescription>Manage your profile information</CardDescription>
+              <CardTitle>Perfil</CardTitle>
+              <CardDescription>Gerencie suas informações de perfil</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex flex-col gap-4 sm:flex-row">
                 <div className="flex flex-col items-center gap-2 sm:w-1/3">
                   <img src={user.avatar || "/placeholder.svg"} alt={user.name} className="h-32 w-32 rounded-full" />
                   <Button variant="outline" size="sm">
-                    Change Avatar
+                    Alterar Avatar
                   </Button>
                 </div>
                 <div className="space-y-4 sm:w-2/3">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">Nome</Label>
                       <Input id="name" defaultValue={user.name} disabled={!isEditing} />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">E-mail</Label>
                       <Input id="email" type="email" defaultValue={user.email} disabled={!isEditing} />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="role">Role</Label>
+                      <Label htmlFor="role">Cargo</Label>
                       <Input id="role" defaultValue={user.role} disabled={!isEditing} />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company</Label>
+                      <Label htmlFor="company">Empresa</Label>
                       <Input id="company" defaultValue={user.company} disabled={!isEditing} />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="location">Location</Label>
+                    <Label htmlFor="location">Localização</Label>
                     <Input id="location" defaultValue={user.location} disabled={!isEditing} />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="bio">Bio</Label>
+                    <Label htmlFor="bio">Biografia</Label>
                     <Textarea id="bio" defaultValue={user.bio} disabled={!isEditing} className="min-h-[100px]" />
                   </div>
                 </div>
@@ -85,12 +85,12 @@ export default function AccountPage() {
               {isEditing ? (
                 <>
                   <Button variant="outline" onClick={() => setIsEditing(false)}>
-                    Cancel
+                    Cancelar
                   </Button>
-                  <Button onClick={() => setIsEditing(false)}>Save Changes</Button>
+                  <Button onClick={() => setIsEditing(false)}>Salvar Alterações</Button>
                 </>
               ) : (
-                <Button onClick={() => setIsEditing(true)}>Edit Profile</Button>
+                <Button onClick={() => setIsEditing(true)}>Editar Perfil</Button>
               )}
             </CardFooter>
           </Card>
@@ -98,71 +98,71 @@ export default function AccountPage() {
         <TabsContent value="notifications" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Notification Preferences</CardTitle>
-              <CardDescription>Manage how you receive notifications</CardDescription>
+              <CardTitle>Preferências de Notificação</CardTitle>
+              <CardDescription>Gerencie como você recebe notificações</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
-                <h3 className="text-lg font-medium">Email Notifications</h3>
+                <h3 className="text-lg font-medium">Notificações por E-mail</h3>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="email-tasks">Task assignments</Label>
+                      <Label htmlFor="email-tasks">Atribuição de tarefas</Label>
                     </div>
                     <Switch id="email-tasks" defaultChecked />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="email-comments">Comments on your tasks</Label>
+                      <Label htmlFor="email-comments">Comentários nas suas tarefas</Label>
                     </div>
                     <Switch id="email-comments" defaultChecked />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="email-mentions">Mentions</Label>
+                      <Label htmlFor="email-mentions">Menções</Label>
                     </div>
                     <Switch id="email-mentions" defaultChecked />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="email-updates">Project updates</Label>
+                      <Label htmlFor="email-updates">Atualizações de projeto</Label>
                     </div>
                     <Switch id="email-updates" />
                   </div>
                 </div>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-medium">In-App Notifications</h3>
+                <h3 className="text-lg font-medium">Notificações no App</h3>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Bell className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="app-tasks">Task assignments</Label>
+                      <Label htmlFor="app-tasks">Atribuição de tarefas</Label>
                     </div>
                     <Switch id="app-tasks" defaultChecked />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Bell className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="app-comments">Comments on your tasks</Label>
+                      <Label htmlFor="app-comments">Comentários nas suas tarefas</Label>
                     </div>
                     <Switch id="app-comments" defaultChecked />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Bell className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="app-mentions">Mentions</Label>
+                      <Label htmlFor="app-mentions">Menções</Label>
                     </div>
                     <Switch id="app-mentions" defaultChecked />
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Bell className="h-4 w-4 text-muted-foreground" />
-                      <Label htmlFor="app-updates">Project updates</Label>
+                      <Label htmlFor="app-updates">Atualizações de projeto</Label>
                     </div>
                     <Switch id="app-updates" defaultChecked />
                   </div>
@@ -170,34 +170,34 @@ export default function AccountPage() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Save Preferences</Button>
+              <Button>Salvar Preferências</Button>
             </CardFooter>
           </Card>
         </TabsContent>
         <TabsContent value="billing" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Billing Information</CardTitle>
-              <CardDescription>Manage your subscription and billing details</CardDescription>
+              <CardTitle>Informações de Cobrança</CardTitle>
+              <CardDescription>Gerencie sua assinatura e detalhes de cobrança</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="rounded-lg border p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium">Pro Plan</h3>
-                    <p className="text-sm text-muted-foreground">$12/user/month</p>
+                    <h3 className="font-medium">Plano Pro</h3>
+                    <p className="text-sm text-muted-foreground">R$12/usuário/mês</p>
                   </div>
                   <Button variant="outline" size="sm">
-                    Change Plan
+                    Alterar Plano
                   </Button>
                 </div>
                 <div className="mt-4 text-sm">
-                  <p>Next billing date: October 1, 2023</p>
-                  <p>5 users ($60/month)</p>
+                  <p>Próxima cobrança: 1 de outubro de 2023</p>
+                  <p>5 usuários (R$60/mês)</p>
                 </div>
               </div>
               <div className="space-y-2">
-                <h3 className="text-lg font-medium">Payment Method</h3>
+                <h3 className="text-lg font-medium">Método de Pagamento</h3>
                 <div className="rounded-lg border p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -205,47 +205,47 @@ export default function AccountPage() {
                         <User className="h-4 w-4" />
                       </div>
                       <div>
-                        <p className="font-medium">Visa ending in 4242</p>
-                        <p className="text-sm text-muted-foreground">Expires 12/2024</p>
+                        <p className="font-medium">Visa terminando em 4242</p>
+                        <p className="text-sm text-muted-foreground">Expira 12/2024</p>
                       </div>
                     </div>
                     <Button variant="outline" size="sm">
-                      Update
+                      Atualizar
                     </Button>
                   </div>
                 </div>
               </div>
               <div className="space-y-2">
-                <h3 className="text-lg font-medium">Billing History</h3>
+                <h3 className="text-lg font-medium">Histórico de Cobrança</h3>
                 <div className="rounded-lg border">
                   <div className="flex items-center justify-between border-b p-4">
                     <div>
-                      <p className="font-medium">September 1, 2023</p>
-                      <p className="text-sm text-muted-foreground">Pro Plan - 5 users</p>
+                      <p className="font-medium">1 de setembro de 2023</p>
+                      <p className="text-sm text-muted-foreground">Plano Pro - 5 usuários</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-medium">$60.00</p>
-                      <p className="text-sm text-muted-foreground">Paid</p>
+                      <p className="font-medium">R$60,00</p>
+                      <p className="text-sm text-muted-foreground">Pago</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between border-b p-4">
                     <div>
-                      <p className="font-medium">August 1, 2023</p>
-                      <p className="text-sm text-muted-foreground">Pro Plan - 5 users</p>
+                      <p className="font-medium">1 de agosto de 2023</p>
+                      <p className="text-sm text-muted-foreground">Plano Pro - 5 usuários</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-medium">$60.00</p>
-                      <p className="text-sm text-muted-foreground">Paid</p>
+                      <p className="font-medium">R$60,00</p>
+                      <p className="text-sm text-muted-foreground">Pago</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between p-4">
                     <div>
-                      <p className="font-medium">July 1, 2023</p>
-                      <p className="text-sm text-muted-foreground">Pro Plan - 5 users</p>
+                      <p className="font-medium">1 de julho de 2023</p>
+                      <p className="text-sm text-muted-foreground">Plano Pro - 5 usuários</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-medium">$60.00</p>
-                      <p className="text-sm text-muted-foreground">Paid</p>
+                      <p className="font-medium">R$60,00</p>
+                      <p className="text-sm text-muted-foreground">Pago</p>
                     </div>
                   </div>
                 </div>
@@ -256,62 +256,62 @@ export default function AccountPage() {
         <TabsContent value="security" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Security Settings</CardTitle>
-              <CardDescription>Manage your account security</CardDescription>
+              <CardTitle>Configurações de Segurança</CardTitle>
+              <CardDescription>Gerencie a segurança da sua conta</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <h3 className="text-lg font-medium">Change Password</h3>
+                <h3 className="text-lg font-medium">Alterar Senha</h3>
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="current-password">Current Password</Label>
+                    <Label htmlFor="current-password">Senha Atual</Label>
                     <Input id="current-password" type="password" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="new-password">New Password</Label>
+                    <Label htmlFor="new-password">Nova Senha</Label>
                     <Input id="new-password" type="password" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="confirm-password">Confirm New Password</Label>
+                    <Label htmlFor="confirm-password">Confirmar Nova Senha</Label>
                     <Input id="confirm-password" type="password" />
                   </div>
-                  <Button>Update Password</Button>
+                  <Button>Atualizar Senha</Button>
                 </div>
               </div>
               <div className="space-y-2">
-                <h3 className="text-lg font-medium">Two-Factor Authentication</h3>
+                <h3 className="text-lg font-medium">Autenticação em Duas Etapas</h3>
                 <div className="rounded-lg border p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-medium">Two-Factor Authentication</p>
-                      <p className="text-sm text-muted-foreground">Add an extra layer of security to your account</p>
+                      <p className="font-medium">Autenticação em Duas Etapas</p>
+                      <p className="text-sm text-muted-foreground">Adicione uma camada extra de segurança à sua conta</p>
                     </div>
                     <Switch id="2fa" />
                   </div>
                 </div>
               </div>
               <div className="space-y-2">
-                <h3 className="text-lg font-medium">Sessions</h3>
+                <h3 className="text-lg font-medium">Sessões</h3>
                 <div className="rounded-lg border">
                   <div className="flex items-center justify-between border-b p-4">
                     <div>
-                      <p className="font-medium">Current Session</p>
-                      <p className="text-sm text-muted-foreground">Chrome on macOS - San Francisco, CA</p>
+                      <p className="font-medium">Sessão Atual</p>
+                      <p className="text-sm text-muted-foreground">Chrome no macOS - São Paulo, SP</p>
                     </div>
-                    <div className="text-sm text-muted-foreground">Active now</div>
+                    <div className="text-sm text-muted-foreground">Ativa agora</div>
                   </div>
                   <div className="flex items-center justify-between p-4">
                     <div>
-                      <p className="font-medium">Previous Session</p>
-                      <p className="text-sm text-muted-foreground">Safari on iPhone - San Francisco, CA</p>
+                      <p className="font-medium">Sessão Anterior</p>
+                      <p className="text-sm text-muted-foreground">Safari no iPhone - São Paulo, SP</p>
                     </div>
-                    <div className="text-sm text-muted-foreground">2 days ago</div>
+                    <div className="text-sm text-muted-foreground">2 dias atrás</div>
                   </div>
                 </div>
               </div>
             </CardContent>
             <CardFooter>
-              <Button variant="destructive">Log Out of All Sessions</Button>
+              <Button variant="destructive">Encerrar Todas as Sessões</Button>
             </CardFooter>
           </Card>
         </TabsContent>

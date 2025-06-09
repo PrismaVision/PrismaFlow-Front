@@ -28,7 +28,6 @@ export default function AppLayout({
   const [notificationCount, setNotificationCount] = useState(3)
   const [mounted, setMounted] = useState(false)
 
-  // After mounting, we can safely show the UI that depends on the theme
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -36,19 +35,19 @@ export default function AppLayout({
   const routes = [
     {
       href: "/dashboard",
-      label: "Dashboard",
+      label: "Painel",
       icon: Home,
       active: pathname === "/dashboard",
     },
     {
       href: "/projects",
-      label: "Projects",
+      label: "Projetos",
       icon: Clock,
       active: pathname.startsWith("/projects"),
     },
     {
       href: "/account",
-      label: "My Account",
+      label: "Minha Conta",
       icon: User,
       active: pathname === "/account",
     },
@@ -63,7 +62,7 @@ export default function AppLayout({
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden">
                   <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle menu</span>
+                  <span className="sr-only">Abrir menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[240px] sm:w-[300px]">
@@ -112,25 +111,25 @@ export default function AppLayout({
                       {notificationCount}
                     </span>
                   )}
-                  <span className="sr-only">Toggle notifications</span>
+                  <span className="sr-only">Abrir notificações</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+                <DropdownMenuLabel>Notificações</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <span>John assigned you a task</span>
+                  <span>João atribuiu uma tarefa a você</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span>New comment on "API Integration"</span>
+                  <span>Novo comentário em "Integração de API"</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span>Sprint planning starts tomorrow</span>
+                  <span>Planejamento da sprint começa amanhã</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/notifications" className="w-full cursor-pointer">
-                    View all notifications
+                    Ver todas as notificações
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -142,7 +141,7 @@ export default function AppLayout({
                     <>
                       <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                       <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                      <span className="sr-only">Toggle theme</span>
+                      <span className="sr-only">Alternar tema</span>
                     </>
                   )}
                 </Button>
@@ -150,45 +149,45 @@ export default function AppLayout({
               <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => setTheme("light")}>
                   <Sun className="mr-2 h-4 w-4" />
-                  <span>Light</span>
+                  <span>Claro</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
                   <Moon className="mr-2 h-4 w-4" />
-                  <span>Dark</span>
+                  <span>Escuro</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("system")}>
                   <Settings className="mr-2 h-4 w-4" />
-                  <span>System</span>
+                  <span>Sistema</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
-                  <img src="/placeholder.svg?height=32&width=32" alt="User" className="h-8 w-8 rounded-full" />
-                  <span className="sr-only">Toggle user menu</span>
+                  <img src="/placeholder.svg?height=32&width=32" alt="Usuário" className="h-8 w-8 rounded-full" />
+                  <span className="sr-only">Abrir menu do usuário</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/account" className="cursor-pointer">
                     <User className="mr-2 h-4 w-4" />
-                    <span>Profile</span>
+                    <span>Perfil</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/account/settings" className="cursor-pointer">
                     <Settings className="mr-2 h-4 w-4" />
-                    <span>Settings</span>
+                    <span>Configurações</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/login" className="cursor-pointer">
                     <LogOut className="mr-2 h-4 w-4" />
-                    <span>Log out</span>
+                    <span>Sair</span>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>

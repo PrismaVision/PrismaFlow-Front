@@ -6,75 +6,75 @@ import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 
 export default function ProjectsPage() {
-  // Sample data
+  // Dados de exemplo
   const projects = [
     {
       id: "1",
-      name: "Website Redesign",
-      description: "Redesign the company website with a modern look and feel",
+      name: "Redesign do Site",
+      description: "Redesenhar o site da empresa com um visual moderno",
       progress: 75,
-      status: "In Progress",
-      dueDate: "Oct 15, 2023",
+      status: "Em andamento",
+      dueDate: "15 Out, 2023",
     },
     {
       id: "2",
-      name: "Mobile App Development",
-      description: "Develop a mobile app for iOS and Android platforms",
+      name: "Desenvolvimento de App Mobile",
+      description: "Desenvolver um aplicativo para iOS e Android",
       progress: 40,
-      status: "In Progress",
-      dueDate: "Dec 1, 2023",
+      status: "Em andamento",
+      dueDate: "1 Dez, 2023",
     },
     {
       id: "3",
-      name: "Marketing Campaign",
-      description: "Plan and execute a marketing campaign for Q4",
+      name: "Campanha de Marketing",
+      description: "Planejar e executar uma campanha de marketing para o Q4",
       progress: 20,
-      status: "Planning",
-      dueDate: "Nov 10, 2023",
+      status: "Planejamento",
+      dueDate: "10 Nov, 2023",
     },
     {
       id: "4",
-      name: "Product Launch",
-      description: "Prepare for the launch of our new product line",
+      name: "Lançamento de Produto",
+      description: "Preparar o lançamento da nova linha de produtos",
       progress: 10,
-      status: "Planning",
-      dueDate: "Jan 5, 2024",
+      status: "Planejamento",
+      dueDate: "5 Jan, 2024",
     },
     {
       id: "5",
-      name: "Customer Portal",
-      description: "Build a customer portal for account management",
+      name: "Portal do Cliente",
+      description: "Construir um portal do cliente para gerenciamento de contas",
       progress: 60,
-      status: "In Progress",
-      dueDate: "Oct 30, 2023",
+      status: "Em andamento",
+      dueDate: "30 Out, 2023",
     },
     {
       id: "6",
-      name: "Internal Tools",
-      description: "Develop internal tools for team productivity",
+      name: "Ferramentas Internas",
+      description: "Desenvolver ferramentas internas para produtividade da equipe",
       progress: 90,
-      status: "Review",
-      dueDate: "Oct 10, 2023",
+      status: "Revisão",
+      dueDate: "10 Out, 2023",
     },
   ]
 
   return (
     <div className="container py-6 space-y-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-3xl font-bold">Projects</h1>
+        <h1 className="text-3xl font-bold">Projetos</h1>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
-          New Project
+          Novo Projeto
         </Button>
       </div>
 
       <div className="flex items-center gap-4">
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input type="search" placeholder="Search projects..." className="pl-8" />
+          <Input type="search" placeholder="Buscar projetos..." className="pl-8" />
         </div>
-        <Button variant="outline">Filter</Button>
-        <Button variant="outline">Sort</Button>
+        <Button variant="outline">Filtrar</Button>
+        <Button variant="outline">Ordenar</Button>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -87,7 +87,7 @@ export default function ProjectsPage() {
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span>Progress</span>
+                  <span>Progresso</span>
                   <span className="font-medium">{project.progress}%</span>
                 </div>
                 <Progress value={project.progress} />
@@ -98,7 +98,7 @@ export default function ProjectsPage() {
                   <span>{project.status}</span>
                 </div>
                 <div>
-                  <span className="font-medium">Due: </span>
+                  <span className="font-medium">Entrega: </span>
                   <span>{project.dueDate}</span>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function ProjectsPage() {
             <CardFooter>
               <Link href={`/projects/${project.id}`} className="w-full">
                 <Button variant="outline" className="w-full">
-                  View Project
+                  Ver Projeto
                 </Button>
               </Link>
             </CardFooter>

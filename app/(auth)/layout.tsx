@@ -1,4 +1,4 @@
-import { Clock } from 'lucide-react'
+import { Clock, GalleryVerticalEnd } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -9,12 +9,16 @@ interface AuthLayoutProps {
 export default function AuthLayout({ children }: AuthLayoutProps) {
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center bg-muted/40 p-4">
-            <Link href="/" className="absolute left-4 top-4 flex items-center gap-2 md:left-8 md:top-8">
-                <Clock className="h-6 w-6" />
-                <span className="text-xl font-bold">TaskFlow</span>
-            </Link>
-            {children}
+        <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+            <div className="flex w-full max-w-sm flex-col gap-6">
+                <a href="#" className="flex items-center gap-2 self-center font-medium">
+                    <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
+                        <GalleryVerticalEnd className="size-4" />
+                    </div>
+                    TaskFlow.
+                </a>
+                {children}
+            </div>
         </div>
     )
 }
