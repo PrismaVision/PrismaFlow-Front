@@ -8,8 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "TaskFlow - ScrumBan Task Management",
-  description: "Streamline your workflow with our ScrumBan task management solution",
-    generator: 'v0.dev'
+  description: "Streamline your workflow with our ScrumBan task management solution"
 }
 
 export default function RootLayout({
