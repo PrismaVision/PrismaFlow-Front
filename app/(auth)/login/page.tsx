@@ -88,7 +88,7 @@ export default function LoginPage({
                   </div>
                   <Input id="password" type="password" required />
                 </div>
-                <Button type="submit" className="w-full" disabled={isLoading}>
+                <Button type="submit" className="w-full" onClick={handleSubmit} disabled={isLoading}>
                   {isLoading ? "Entrando..." : "Entrar"}
                 </Button>
               </div>

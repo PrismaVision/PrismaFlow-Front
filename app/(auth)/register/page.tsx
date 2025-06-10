@@ -84,7 +84,7 @@ export default function RegisterPage({
                   <Label htmlFor="confirmPassword">Confirmar Senha</Label>
                   <Input id="confirmPassword" type="password" required />
                 </div>
-                <Button type="submit" className="w-full" disabled={isLoading}>
+                <Button type="submit" className="w-full" onClick={handleSubmit} disabled={isLoading}>
                   {isLoading ? "Entrando..." : "Entrar"}
                 </Button>
               </div>
