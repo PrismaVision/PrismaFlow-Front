@@ -25,7 +25,7 @@ export default function RegisterPage({
     // Simulate registration
     setTimeout(() => {
       setIsLoading(false)
-      router.push("/dashboard")
+      router.push("/projects")
     }, 1000)
   }
 
