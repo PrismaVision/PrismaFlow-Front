@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { Switch } from "@/components/ui/switch"
+import { Container } from "@/components/ui/container"
 
 export default function AccountPage() {
   const [isEditing, setIsEditing] = useState(false)
@@ -25,7 +26,7 @@ export default function AccountPage() {
   }
 
   return (
-    <div className="container py-6 space-y-6">
+    <Container className="container py-6 space-y-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <h1 className="text-3xl font-bold">Minha Conta</h1>
       </div>
@@ -52,7 +53,7 @@ export default function AccountPage() {
                   </Button>
                 </div>
                 <div className="space-y-4 sm:w-2/3">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Nome</Label>
                       <Input id="name" defaultValue={user.name} disabled={!isEditing} />
@@ -225,7 +226,7 @@ export default function AccountPage() {
                     </div>
                     <div className="text-right">
                       <p className="font-medium">R$60,00</p>
-                      <p className="text-sm text-muted-foreground">Pago</p>
+                      <p className="text-sm text-blue-600 dark:text-blue-500">Programado</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between border-b p-4">
@@ -235,7 +236,7 @@ export default function AccountPage() {
                     </div>
                     <div className="text-right">
                       <p className="font-medium">R$60,00</p>
-                      <p className="text-sm text-muted-foreground">Pago</p>
+                      <p className="text-sm text-yellow-500 dark:text-yellow-400">Processando</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between p-4">
@@ -245,7 +246,7 @@ export default function AccountPage() {
                     </div>
                     <div className="text-right">
                       <p className="font-medium">R$60,00</p>
-                      <p className="text-sm text-muted-foreground">Pago</p>
+                      <p className="text-sm  text-green-600 dark:text-green-500">Pago</p>
                     </div>
                   </div>
                 </div>
@@ -316,6 +317,6 @@ export default function AccountPage() {
           </Card>
         </TabsContent>
       </Tabs>
-    </div>
+    </Container>
   )
 }

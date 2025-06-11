@@ -17,6 +17,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
+import { Container } from "@/components/ui/container"
 
 export default function AppLayout({
   children,
@@ -56,7 +57,7 @@ export default function AppLayout({
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <Container className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Sheet>
               <SheetTrigger asChild>
@@ -71,9 +72,8 @@ export default function AppLayout({
                     <Link
                       key={route.href}
                       href={route.href}
-                      className={`flex items-center gap-2 px-2 py-1 text-sm font-medium ${
-                        route.active ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                      }`}
+                      className={`flex items-center gap-2 px-2 py-1 text-sm font-medium ${route.active ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                        }`}
                     >
                       <route.icon className="h-4 w-4" />
                       {route.label}
@@ -92,9 +92,8 @@ export default function AppLayout({
               <Link
                 key={route.href}
                 href={route.href}
-                className={`flex items-center gap-2 text-sm font-medium ${
-                  route.active ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                }`}
+                className={`flex items-center gap-2 text-sm font-medium ${route.active ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                  }`}
               >
                 <route.icon className="h-4 w-4" />
                 {route.label}
@@ -193,9 +192,13 @@ export default function AppLayout({
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-        </div>
+        </Container>
       </header>
-      <main className="flex-1">{children}</main>
+      <main className="flex-1">
+        <Container>
+          {children}
+        </Container>
+      </main>
     </div>
   )
 }
