@@ -1,12 +1,13 @@
 import Link from "next/link"
 import { ArrowRight, CheckCircle2, Clock, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Container } from "@/components/ui/container"
 
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <Container className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Clock className="h-6 w-6" />
             <span className="text-xl font-bold">TaskFlow</span>
@@ -35,11 +36,11 @@ export default function LandingPage() {
               <Button size="sm">Comece Já</Button>
             </Link>
           </div>
-        </div>
+        </Container>
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+          <Container className="px-4 md:px-6">
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -63,10 +64,10 @@ export default function LandingPage() {
                 </Link>
               </div>
             </div>
-          </div>
+          </Container>
         </section>
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
-          <div className="container px-4 md:px-6">
+          <Container className="px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Principais Recursos</div>
@@ -114,10 +115,10 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </Container>
         </section>
         <section id="pricing" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <Container className=" px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Simples, preços transparentes</h2>
@@ -226,11 +227,11 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </Container>
         </section>
       </main>
       <footer className="w-full border-t py-6">
-        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
+        <Container className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">
             <Clock className="h-6 w-6" />
             <span className="text-xl font-bold">TaskFlow</span>
@@ -244,7 +245,7 @@ export default function LandingPage() {
               Privacidade
             </Link>
           </div>
-        </div>
+        </Container>
       </footer>
     </div>
   )
