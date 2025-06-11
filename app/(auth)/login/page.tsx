@@ -25,7 +25,7 @@ export default function LoginPage({
     // Simulate authentication
     setTimeout(() => {
       setIsLoading(false)
-      router.push("/dashboard")
+      router.push("/projects")
     }, 1000)
   }
 
